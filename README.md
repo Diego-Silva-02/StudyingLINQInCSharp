@@ -1,17 +1,12 @@
 # LinqTutorial
 
-Hello! 
+Hello, my name is Diego and welcome to my GitHub.
 
-My name is Krystyna and welcome to my GitHub.
-
-This repository is part of my  "LINQ Tutorial: Master the Key C# Library" course, which you can find under this link: https://www.udemy.com/course/linq-tutorial-master-the-key-csharp-library/?referralCode=384B340D233F12F6A498
+This repository is a study of "LINQ Tutorial: Master the Key C# Library" course, which you can find under this link: https://www.udemy.com/course/linq-tutorial-master-the-key-csharp-library/?referralCode=384B340D233F12F6A498
 
 ## FAQ:
 
-### Q1: How do I download the files?
-A: If you're not familiar with GitHub and just want to download the entire solution, click the green button saying "Code", and then select the "Download ZIP".
-
-### Q2: What are the projects in this solution?
+### Q1: What are the projects in this solution?
 A: The solution consists of 4 main projects:
 #### LinqTutorial
 Contains the code shown in the course's videos.
@@ -22,7 +17,7 @@ Contains solved versions of the coding exercises. You can take a look at them to
 #### ExercisesTests
 Contains unit tests which validate if your solutions of exercises are correct (the solutions from the Exercises project are validated).
 
-### Q3: How to approach solving coding exercises?
+### Q2: How to approach solving coding exercises?
 Let's say you want to practice using the Any method from LINQ. Go to Exercises project and open Any.cs file. 
 
 If you want to solve coding exercise 1, find the method with a comment describing what this method should do.
