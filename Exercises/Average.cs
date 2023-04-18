@@ -60,9 +60,9 @@ namespace Exercises
         public static float CalculateAverageHeight_Refactored(
             List<float?> heights, float defaultIfNull)
         {
-            return (float)((heights == null || !heights.Any()) ? 
+            return (heights == null || !heights.Any()) ? 
                 0 : 
-                heights.Average(height => height ?? defaultIfNull));
+                heights.Average(height => height ?? defaultIfNull);
         }
 
         //do not modify this method
