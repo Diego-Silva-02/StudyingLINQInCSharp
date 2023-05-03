@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Exercises
 {
@@ -28,8 +30,16 @@ namespace Exercises
          */
         public static IEnumerable<string> AddStartAndEndMarkers(IEnumerable<string> words)
         {
-            //TODO your code goes here
-            throw new NotImplementedException();
+            const string Start = "START";
+            const string End = "END";
+
+            var wordsWithStart = words.First() == Start
+                ? words 
+                : words.Prepend(Start);
+
+            return wordsWithStart.Last() == End 
+                ? wordsWithStart 
+                : wordsWithStart.Append(End);
         }
 
         //Coding Exercise 2
@@ -51,8 +61,17 @@ namespace Exercises
         public static IEnumerable<int> RemoveDuplicatesFromStartAndEnd(
             IEnumerable<int> numbers)
         {
-            //TODO your code goes here
-            throw new NotImplementedException();
+            if (numbers.Count() <= 1)
+                return numbers;
+
+            var firstNumber = numbers.First();
+            var lastNumber = numbers.Last();
+
+            return numbers
+                .Where(number => number != firstNumber)
+                .Prepend(firstNumber)
+                .Where(number => number != lastNumber)
+                .Append(lastNumber);
         }
 
         //Refactoring challenge
@@ -60,8 +79,9 @@ namespace Exercises
         public static IEnumerable<string> TrimSentenceAndChangeEndMarker_Refactored(
             IEnumerable<string> words)
         {
-            //TODO your code goes here
-            throw new NotImplementedException();
+            return words
+                .TakeWhile(word => word != "The end")
+                .Append("END");
         }
 
         //do not modify this method
